@@ -1,0 +1,464 @@
+/*
+ * b-intohimo.com — WordPress Additional CSS
+ * Paste into: Appearance → Customize → Additional CSS
+ * Or: Appearance → Editor → Styles → Additional CSS (block themes)
+ *
+ * Brand colors extracted from logo:
+ *   Primary blue:  #5060a0
+ *   Navy accent:   #001080
+ *   Brand gray:    #a0a0a0
+ *   Light bg:      #f4f6fa
+ *   Text:          #1e2433
+ */
+
+:root {
+	--bint-primary: #5060a0;
+	--bint-primary-dark: #001080;
+	--bint-primary-light: #7080b0;
+	--bint-gray: #a0a0a0;
+	--bint-gray-light: #e8eaef;
+	--bint-bg: #f4f6fa;
+	--bint-text: #1e2433;
+	--bint-text-muted: #5a6275;
+	--bint-white: #ffffff;
+	--bint-radius: 8px;
+	--bint-shadow: 0 4px 24px rgba(80, 96, 160, 0.12);
+	/* Match Kadence / theme content gutters (fallbacks for other themes) */
+	--bint-gutter: max(1.25rem, var(--global-content-edge-padding, var(--wp--style--root--padding-right, 1.5rem)));
+	--bint-content-padding: var(--bint-gutter);
+	--bint-content-width: var(--global-content-width, var(--wp--style--global--content-size, 1200px));
+	--bint-block-gap: 1.5rem;
+}
+
+/* ── Layout: keep content inside .entry-content-wrap margins ── */
+/*
+ * Block groups use alignfull which breaks out to 100vw.
+ * Reset that inside the theme content wrapper so sections
+ * align with .entry-content-wrap instead of the viewport edge.
+ */
+.entry-content-wrap .bint-hero,
+.entry-content-wrap .bint-section,
+.entry-content-wrap .bint-cta,
+.entry-content-wrap .bint-highlight,
+.entry-content .bint-hero,
+.entry-content .bint-section,
+.entry-content .bint-cta,
+.entry-content .bint-highlight,
+.wp-block-post-content .bint-hero,
+.wp-block-post-content .bint-section,
+.wp-block-post-content .bint-cta,
+.wp-block-post-content .bint-highlight,
+.entry-content-wrap .wp-block-group.alignfull[class*="bint-"],
+.entry-content .wp-block-group.alignfull[class*="bint-"],
+.wp-block-post-content .wp-block-group.alignfull[class*="bint-"] {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	left: auto !important;
+	right: auto !important;
+	transform: none !important;
+	box-sizing: border-box;
+}
+
+/* Page shell: space above/below content blocks inside theme container */
+.page .entry-content-wrap,
+.page .content-container .entry-content-wrap,
+article.page .entry-content-wrap {
+	padding-top: var(--bint-gutter) !important;
+	padding-bottom: var(--bint-gutter) !important;
+}
+
+/* Shared horizontal + vertical padding on all content blocks */
+.bint-hero,
+.bint-section,
+.bint-cta,
+.bint-highlight,
+.wp-block-group.bint-hero,
+.wp-block-group.bint-section,
+.wp-block-group.bint-cta,
+.wp-block-group.bint-highlight {
+	padding-inline: var(--bint-gutter);
+	box-sizing: border-box;
+}
+
+
+/* ── Global typography ── */
+body {
+	color: var(--bint-text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.wp-block-heading {
+	color: var(--bint-primary-dark);
+}
+
+a {
+	color: var(--bint-primary);
+}
+
+a:hover {
+	color: var(--bint-primary-dark);
+}
+
+/* ── Buttons ── */
+.wp-block-button__link,
+.bint-btn {
+	background-color: var(--bint-primary) !important;
+	color: var(--bint-white) !important;
+	border-radius: var(--bint-radius);
+	padding: 0.65rem 1.75rem;
+	font-weight: 600;
+	line-height: 1.25;
+	min-height: 3rem;
+	box-sizing: border-box;
+	border: 2px solid transparent;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+}
+
+.wp-block-buttons {
+	align-items: center;
+}
+
+.wp-block-button {
+	display: flex;
+}
+
+.wp-block-button__link:hover,
+.bint-btn:hover {
+	background-color: var(--bint-primary-dark) !important;
+	transform: translateY(-1px);
+}
+
+.is-style-outline .wp-block-button__link {
+	background-color: transparent !important;
+	color: var(--bint-primary) !important;
+	border-color: var(--bint-primary) !important;
+}
+
+.is-style-outline .wp-block-button__link:hover {
+	background-color: var(--bint-primary) !important;
+	color: var(--bint-white) !important;
+	border-color: var(--bint-primary) !important;
+}
+
+/* ── Hero section ── */
+.bint-hero {
+	background: linear-gradient(135deg, var(--bint-primary-dark) 0%, var(--bint-primary) 60%, var(--bint-primary-light) 100%);
+	color: var(--bint-white);
+	padding-block: 4rem;
+	text-align: center;
+	border-radius: var(--bint-radius);
+	margin-bottom: var(--bint-block-gap);
+}
+
+.bint-hero h1,
+.bint-hero .wp-block-heading {
+	color: var(--bint-white) !important;
+	font-size: clamp(2rem, 5vw, 3.25rem);
+	line-height: 1.2;
+}
+
+.bint-hero p {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.15rem;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bint-hero .wp-block-buttons {
+	display: flex !important;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	gap: 1rem;
+	width: fit-content;
+	max-width: 100%;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.bint-hero .wp-block-button {
+	flex: 0 0 11.5rem;
+	width: 11.5rem;
+}
+
+.bint-hero .wp-block-button__link {
+	width: 100%;
+	background-color: var(--bint-white) !important;
+	color: var(--bint-primary-dark) !important;
+	border-color: var(--bint-white) !important;
+}
+
+.bint-hero .wp-block-button__link:hover {
+	background-color: var(--bint-gray-light) !important;
+	border-color: var(--bint-gray-light) !important;
+	color: var(--bint-primary-dark) !important;
+}
+
+/* Hero: outline variant matches filled button (same look, same size) */
+.bint-hero .is-style-outline .wp-block-button__link {
+	background-color: var(--bint-white) !important;
+	color: var(--bint-primary-dark) !important;
+	border-color: var(--bint-white) !important;
+}
+
+.bint-hero .is-style-outline .wp-block-button__link:hover {
+	background-color: var(--bint-gray-light) !important;
+	border-color: var(--bint-gray-light) !important;
+	color: var(--bint-primary-dark) !important;
+}
+
+/* ── Section spacing ── */
+.bint-section {
+	padding-block: 3rem;
+	max-width: 100%;
+	margin: 0 0 var(--bint-block-gap);
+	box-sizing: border-box;
+}
+
+.bint-section-alt {
+	background-color: var(--bint-bg);
+	border-radius: var(--bint-radius);
+}
+
+.bint-section-title {
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+
+.bint-section-subtitle {
+	text-align: center;
+	color: var(--bint-text-muted);
+	max-width: 680px;
+	margin: 0 auto 3rem;
+	font-size: 1.05rem;
+}
+
+/* ── Service cards (native Columns blocks in WP 7) ── */
+.bint-cards {
+	gap: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.bint-cards .bint-card,
+.wp-block-column.bint-card {
+	background: var(--bint-white);
+	border-radius: var(--bint-radius);
+	padding: 1.5rem;
+	box-shadow: var(--bint-shadow);
+	border-top: 4px solid var(--bint-primary);
+}
+
+.bint-cards .bint-card h3,
+.wp-block-column.bint-card h3 {
+	color: var(--bint-primary);
+	margin-top: 0;
+}
+
+/* ── Highlight section (Testing Robots) ── */
+.bint-highlight {
+	background: linear-gradient(135deg, var(--bint-primary-dark), var(--bint-primary)) !important;
+	color: var(--bint-white);
+	border-radius: var(--bint-radius);
+	padding-block: 2.5rem;
+	margin-bottom: var(--bint-block-gap);
+}
+
+.bint-highlight .wp-block-columns {
+	gap: 2rem;
+}
+
+.bint-highlight ul {
+	padding-left: 1.25rem;
+}
+
+.bint-highlight h2,
+.bint-highlight h3,
+.bint-highlight .wp-block-heading {
+	color: var(--bint-white) !important;
+}
+
+.bint-highlight p,
+.bint-highlight li {
+	color: rgba(255, 255, 255, 0.88);
+}
+
+/* ── Tech stack as centered paragraphs (WP 7 native) ── */
+.bint-pills {
+	color: var(--bint-text-muted);
+	font-size: 0.95rem;
+	line-height: 1.8;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bint-cards .bint-card h3 a,
+.wp-block-column.bint-card h3 a {
+	color: var(--bint-primary);
+	text-decoration: none;
+}
+
+.bint-cards .bint-card h3 a:hover,
+.wp-block-column.bint-card h3 a:hover {
+	color: var(--bint-primary-dark);
+	text-decoration: underline;
+}
+
+/* Inner pages: keep theme container spacing (do not zero out) */
+.entry-content-wrap .wp-block-group.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	max-width: 100%;
+}
+
+/* Columns and lists: small inner inset so text never touches block edges */
+.bint-section .wp-block-columns,
+.bint-highlight .wp-block-columns {
+	margin-inline: 0;
+}
+
+.bint-section .wp-block-column,
+.bint-highlight .wp-block-column {
+	padding-inline: 0.25rem;
+}
+
+.bint-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1.5rem;
+}
+
+.bint-card {
+	background: var(--bint-white);
+	border-radius: var(--bint-radius);
+	padding: 2rem;
+	box-shadow: var(--bint-shadow);
+	border-top: 4px solid var(--bint-primary);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bint-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 32px rgba(80, 96, 160, 0.18);
+}
+
+.bint-card h3 {
+	color: var(--bint-primary);
+	margin-top: 0;
+	font-size: 1.2rem;
+}
+
+.bint-card p {
+	color: var(--bint-text-muted);
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin-bottom: 0;
+}
+
+.bint-card-icon {
+	width: 48px;
+	height: 48px;
+	background: var(--bint-gray-light);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+	color: var(--bint-primary);
+}
+
+/* ── Tech stack pills ── */
+.bint-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+}
+
+.bint-pill {
+	background: var(--bint-white);
+	border: 1px solid var(--bint-gray-light);
+	color: var(--bint-text);
+	padding: 0.4rem 1rem;
+	border-radius: 999px;
+	font-size: 0.85rem;
+	font-weight: 500;
+	transition: border-color 0.15s, background 0.15s;
+}
+
+.bint-pill:hover {
+	border-color: var(--bint-primary);
+	background: rgba(80, 96, 160, 0.06);
+}
+
+.bint-pill-group-title {
+	font-weight: 700;
+	color: var(--bint-primary-dark);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin: 2rem 0 0.75rem;
+	text-align: center;
+}
+
+/* ── Industries strip ── */
+.bint-industries {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.bint-industry-badge {
+	background: var(--bint-white);
+	border: 2px solid var(--bint-primary);
+	color: var(--bint-primary-dark);
+	padding: 0.75rem 1.5rem;
+	border-radius: var(--bint-radius);
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+/* ── CTA footer band ── */
+.bint-cta {
+	background: var(--bint-primary-dark);
+	color: var(--bint-white);
+	text-align: center;
+	padding-block: 3.5rem;
+	border-radius: var(--bint-radius);
+	margin-bottom: 0;
+}
+
+.bint-cta h2 {
+	color: var(--bint-white) !important;
+}
+
+.bint-cta p {
+	color: rgba(255, 255, 255, 0.85);
+	max-width: 560px;
+	margin: 0 auto 2rem;
+}
+
+/* ── Header / site title override (Kadence & Astra) ── */
+.site-title a,
+.custom-logo-link {
+	color: var(--bint-primary-dark);
+}
+
+/* Kadence global palette hooks */
+:root {
+	--global-palette1: #5060a0;
+	--global-palette2: #001080;
+	--global-palette3: #1e2433;
+	--global-palette4: #5a6275;
+	--global-palette5: #a0a0a0;
+	--global-palette6: #f4f6fa;
+	--global-palette7: #ffffff;
+	--global-palette8: #e8eaef;
+	--global-palette9: #ffffff;
+}

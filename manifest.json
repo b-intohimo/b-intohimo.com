@@ -1,0 +1,47 @@
+{
+  "site": "b-intohimo.com",
+  "format": "wordpress-block-html",
+  "wordpress": {
+    "min_version": "7.0",
+    "content_prefix": "content/pages/",
+    "style_file": "assets/style.css"
+  },
+  "pages": [
+    {
+      "title": "Home",
+      "slug": "home",
+      "file": "content/pages/home.html",
+      "front_page": true
+    },
+    {
+      "title": "About",
+      "slug": "about",
+      "file": "content/pages/about.html"
+    },
+    {
+      "title": "Services",
+      "slug": "services",
+      "file": "content/pages/services.html"
+    },
+    {
+      "title": "Custom Software",
+      "slug": "software",
+      "file": "content/pages/software.html"
+    },
+    {
+      "title": "Testing Robots",
+      "slug": "testing-robots",
+      "file": "content/pages/testing-robots.html"
+    },
+    {
+      "title": "Technology",
+      "slug": "technology",
+      "file": "content/pages/technology.html"
+    },
+    {
+      "title": "Contact",
+      "slug": "contact",
+      "file": "content/pages/contact.html"
+    }
+  ]
+}
