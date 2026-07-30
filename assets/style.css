@@ -530,6 +530,24 @@ a:hover {
 	color: var(--bint-text);
 }
 
+/* ── Footer: hide WordPress & theme credits ── */
+.site-footer a[href*="wordpress.org"],
+.site-footer a[href*="wordpress.com"],
+.site-footer a[href*="kadencewp.com"],
+#colophon a[href*="wordpress.org"],
+#colophon a[href*="kadencewp.com"] {
+	display: none !important;
+}
+
+.site-footer .footer-html:has(a[href*="wordpress.org"]),
+.site-footer .footer-html:has(a[href*="kadencewp.com"]),
+.site-footer .footer-html2,
+.site-footer .site-info,
+#colophon .site-info,
+footer .powered-by-wordpress {
+	display: none !important;
+}
+
 /* ── Header / site title override (Kadence & Astra) ── */
 .site-title a,
 .custom-logo-link {
