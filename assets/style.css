@@ -29,7 +29,7 @@
 	--bint-content-width: var(--global-content-width, var(--wp--style--global--content-size, 1200px));
 	--bint-block-gap: 1.5rem;
 	--bint-card-padding-block: 1.5rem;
-	--bint-card-padding-inline: 2.75rem;
+	--bint-card-padding-inline: 1.85rem;
 }
 
 /* ── Layout: keep content inside .entry-content-wrap margins ── */
