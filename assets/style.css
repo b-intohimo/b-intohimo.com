@@ -444,6 +444,53 @@ a:hover {
 	margin: 0 auto 2rem;
 }
 
+/* ── Contact page — WPForms ── */
+.bint-contact-form {
+	padding-block: 2rem 3rem;
+	max-width: 640px;
+	margin-inline: auto;
+}
+
+.bint-contact-form .wpforms-container {
+	margin: 0 auto;
+}
+
+.bint-contact-form .wpforms-field-label {
+	color: var(--bint-primary-dark);
+	font-weight: 600;
+}
+
+.bint-contact-form .wpforms-submit-container {
+	text-align: center;
+	padding-top: 0.5rem;
+}
+
+.bint-contact-form .wpforms-submit,
+.bint-contact-form button[type="submit"],
+.bint-wpforms-contact .wpforms-submit {
+	background-color: var(--bint-primary) !important;
+	border-color: var(--bint-primary) !important;
+	color: var(--bint-white) !important;
+	border-radius: var(--bint-radius);
+	padding: 0.65rem 2rem;
+	font-weight: 600;
+	min-height: 3rem;
+}
+
+.bint-contact-form .wpforms-submit:hover,
+.bint-contact-form button[type="submit"]:hover {
+	background-color: var(--bint-primary-dark) !important;
+	border-color: var(--bint-primary-dark) !important;
+}
+
+.bint-contact-form .wpforms-confirmation-container-full {
+	background: var(--bint-bg);
+	border-radius: var(--bint-radius);
+	padding: 1.5rem;
+	text-align: center;
+	color: var(--bint-text);
+}
+
 /* ── Header / site title override (Kadence & Astra) ── */
 .site-title a,
 .custom-logo-link {

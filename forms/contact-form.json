@@ -1,0 +1,86 @@
+[
+  {
+    "fields": {
+      "1": {
+        "id": "1",
+        "type": "email",
+        "label": "Email",
+        "description": "",
+        "required": "1",
+        "size": "medium",
+        "placeholder": "your@email.com",
+        "default_value": "",
+        "css": ""
+      },
+      "2": {
+        "id": "2",
+        "type": "text",
+        "label": "Subject",
+        "description": "",
+        "required": "1",
+        "size": "medium",
+        "placeholder": "What is this about?",
+        "limit_count": "1",
+        "limit_mode": "characters",
+        "default_value": "",
+        "input_mask": "",
+        "css": ""
+      },
+      "3": {
+        "id": "3",
+        "type": "textarea",
+        "label": "Message",
+        "description": "",
+        "required": "1",
+        "size": "medium",
+        "placeholder": "Tell us about your project...",
+        "limit_count": "1",
+        "limit_mode": "characters",
+        "default_value": "",
+        "css": ""
+      }
+    },
+    "field_id": 4,
+    "settings": {
+      "form_title": "b-intohimo Contact",
+      "form_desc": "",
+      "submit_text": "Send Message",
+      "submit_text_processing": "Sending...",
+      "form_class": "bint-wpforms-contact",
+      "submit_class": "",
+      "ajax_submit": "1",
+      "notification_enable": "1",
+      "notifications": {
+        "1": {
+          "enable": "1",
+          "notification_name": "Default Notification",
+          "email": "{admin_email}",
+          "subject": "b-intohimo contact: {field_id=\"2\"}",
+          "sender_name": "b-intohimo Website",
+          "sender_address": "{admin_email}",
+          "replyto": "{field_id=\"1\"}",
+          "message": "{all_fields}"
+        }
+      },
+      "confirmations": {
+        "1": {
+          "name": "Default Confirmation",
+          "type": "message",
+          "message": "<p>Thank you for your message. We will get back to you within one business day.</p>",
+          "message_scroll": "1"
+        }
+      },
+      "themes": {
+        "wpformsTheme": "default",
+        "fieldSize": "medium",
+        "buttonBackgroundColor": "#5060a0",
+        "buttonBorderColor": "#5060a0",
+        "buttonTextColor": "#ffffff"
+      },
+      "antispam_v3": "1"
+    },
+    "meta": {
+      "template": "blank"
+    }
+  }
+]

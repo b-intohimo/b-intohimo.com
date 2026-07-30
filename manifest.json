@@ -4,7 +4,15 @@
   "wordpress": {
     "min_version": "7.0",
     "content_prefix": "content/pages/",
-    "style_file": "assets/style.css"
+    "style_file": "assets/style.css",
+    "plugins": ["wpforms"]
+  },
+  "forms": {
+    "contact": {
+      "import_file": "forms/contact-form.json",
+      "form_id": 1,
+      "page": "contact"
+    }
   },
   "pages": [
     {

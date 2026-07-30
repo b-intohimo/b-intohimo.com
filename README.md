@@ -8,8 +8,18 @@ Gutenberg block HTML + brand CSS. Edit here, sync to WordPress via the **GitHub 
 ```
 content/pages/     ← WordPress page content (one .html file per page)
 assets/style.css   ← Brand styling (loaded by b-intohimo Site Content plugin)
+forms/             ← WPForms import (contact-form.json)
 manifest.json      ← Page mapping reference
 ```
+
+## Contact form (WPForms)
+
+1. Import **`forms/contact-form.json`** via **WPForms → Tools → Import**
+2. Note the form ID under **WPForms → All Forms** (default embed uses ID `1`)
+3. If ID differs, update `content/pages/contact.html` and `forms/config.json`
+4. **Fetch from GitHub** on WordPress to refresh the Contact page (or rebuild pages)
+
+See **`forms/README.md`** for details.
 
 ## Pages
 
