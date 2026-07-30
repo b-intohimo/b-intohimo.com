@@ -249,7 +249,7 @@ a:hover {
 .wp-block-column.bint-card {
 	background: var(--bint-white);
 	border-radius: var(--bint-radius);
-	padding: 1.5rem;
+	padding: 2rem;
 	box-shadow: var(--bint-shadow);
 	border-top: 4px solid var(--bint-primary);
 }
@@ -335,7 +335,7 @@ a:hover {
 .bint-card {
 	background: var(--bint-white);
 	border-radius: var(--bint-radius);
-	padding: 2rem;
+	padding: 2.5rem;
 	box-shadow: var(--bint-shadow);
 	border-top: 4px solid var(--bint-primary);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
