@@ -51,20 +51,17 @@ git push -u origin main
 
 Copy the contents of `site-github/` into your repo (e.g. as `site/` or repo root), commit, and push.
 
-## WordPress sync settings
+## WordPress GitHub Sync settings
 
-In **Tools → GitHub Sync**, use:
+In **Tools → GitHub Sync** (plugin v1.1.0+):
 
-| Setting | Value (if this repo is the root) |
-|---------|----------------------------------|
-| Repository owner | your GitHub user or org |
-| Repository name | e.g. `b-intohimo-site` |
-| Base branch | `main` |
+| Setting | Value |
+|---------|--------|
 | Content path prefix | `content/pages/` |
+| Discover GitHub files | ✓ |
+| Create missing pages | ✓ |
 
-If this folder lives inside a monorepo at `site-github/`:
-
-| Content path prefix | `site-github/content/pages/` |
+**All pages sync automatically** by slug: `{slug}.html`. Add a new page in WordPress or a new `.html` file in GitHub — both directions work.
 
 ## Sync workflow
 

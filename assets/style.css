@@ -372,7 +372,38 @@ a:hover {
 	color: var(--bint-primary);
 }
 
-/* ── Tech stack pills ── */
+/* ── Technology page: grouped categories ── */
+.bint-tech-area-title {
+	margin: 2.5rem auto 1.25rem;
+	font-size: 1.35rem;
+	color: var(--bint-primary-dark);
+	position: relative;
+	padding-bottom: 0.5rem;
+}
+
+.bint-tech-area-title:first-of-type {
+	margin-top: 0;
+}
+
+.bint-tech-cards {
+	margin-bottom: 1.25rem;
+}
+
+.bint-tech-card h4,
+.bint-tech-card .wp-block-heading {
+	color: var(--bint-primary);
+	margin: 0 0 0.75rem;
+	font-size: 1rem;
+}
+
+.bint-tech-card p {
+	color: var(--bint-text-muted);
+	font-size: 0.92rem;
+	line-height: 1.55;
+	margin: 0;
+}
+
+/* ── Tech stack pills (legacy) ── */
 .bint-pills {
 	display: flex;
 	flex-wrap: wrap;
