@@ -85,6 +85,14 @@ article.page .entry-content-wrap {
 }
 
 
+/* ── Home page: hide theme page title (hero has the H1) ── */
+.home .entry-header,
+.home .entry-title,
+.home .kadence-page-title-wrap,
+.home .page-title {
+	display: none !important;
+}
+
 /* ── Global typography ── */
 body {
 	color: var(--bint-text);
