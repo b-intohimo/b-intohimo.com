@@ -1,5 +1,5 @@
 {
   "form_title": "b-intohimo Contact",
-  "form_id_after_import": 1,
+  "form_id_after_import": 0,
   "note": "After importing contact-form.json in WPForms, check the numeric form ID under WPForms → All Forms. If it is not 1, update form_id in this file and the wpforms shortcode in content/pages/contact.html, then Fetch from GitHub or rebuild pages."
 }
