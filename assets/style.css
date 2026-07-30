@@ -530,7 +530,7 @@ a:hover {
 	color: var(--bint-text);
 }
 
-/* ── Footer: hide WordPress & theme credits ── */
+/* ── Footer: show "© 2026 B-Intohimo Oy" (hide WP/theme credit text) ── */
 .site-footer a[href*="wordpress.org"],
 .site-footer a[href*="wordpress.com"],
 .site-footer a[href*="kadencewp.com"],
@@ -539,12 +539,21 @@ a:hover {
 	display: none !important;
 }
 
-.site-footer .footer-html:has(a[href*="wordpress.org"]),
-.site-footer .footer-html:has(a[href*="kadencewp.com"]),
-.site-footer .footer-html2,
-.site-footer .site-info,
-#colophon .site-info,
-footer .powered-by-wordpress {
+.site-bottom-footer-wrap .footer-html-inner {
+	font-size: 0 !important;
+	line-height: 0 !important;
+}
+
+.site-bottom-footer-wrap .footer-html-inner::after {
+	content: "© 2026 B-Intohimo Oy";
+	font-size: var(--global-font-size-small, 0.875rem);
+	line-height: var(--global-line-height-body, 1.6);
+	font-weight: inherit;
+	display: block;
+	color: currentColor;
+}
+
+.site-bottom-footer-wrap .footer-html-inner * {
 	display: none !important;
 }
 
