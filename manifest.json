@@ -16,9 +16,10 @@
   },
   "pages": [
     {
-      "title": "Home",
+      "title": "Where quality meets delivery",
       "slug": "home",
       "file": "content/pages/home.html",
+      "menu": "Home",
       "front_page": true
     },
     {
