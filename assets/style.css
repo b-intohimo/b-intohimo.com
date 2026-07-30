@@ -28,6 +28,8 @@
 	--bint-content-padding: var(--bint-gutter);
 	--bint-content-width: var(--global-content-width, var(--wp--style--global--content-size, 1200px));
 	--bint-block-gap: 1.5rem;
+	--bint-card-padding-block: 1.5rem;
+	--bint-card-padding-inline: 2.75rem;
 }
 
 /* ── Layout: keep content inside .entry-content-wrap margins ── */
@@ -249,8 +251,6 @@ a:hover {
 .wp-block-column.bint-card {
 	background: var(--bint-white);
 	border-radius: var(--bint-radius);
-	padding-block: 1.5rem;
-	padding-inline: 2.25rem;
 	box-shadow: var(--bint-shadow);
 	border-top: 4px solid var(--bint-primary);
 }
@@ -322,8 +322,8 @@ a:hover {
 	margin-inline: 0;
 }
 
-.bint-section .wp-block-column,
-.bint-highlight .wp-block-column {
+.bint-section .wp-block-column:not(.bint-card),
+.bint-highlight .wp-block-column:not(.bint-card) {
 	padding-inline: 0.25rem;
 }
 
@@ -333,11 +333,17 @@ a:hover {
 	gap: 1.5rem;
 }
 
+.bint-section .bint-cards .wp-block-column.bint-card,
+.bint-section .wp-block-column.bint-card,
+.bint-highlight .wp-block-column.bint-card,
+.wp-block-column.bint-card {
+	padding-block: var(--bint-card-padding-block) !important;
+	padding-inline: var(--bint-card-padding-inline) !important;
+}
+
 .bint-card {
 	background: var(--bint-white);
 	border-radius: var(--bint-radius);
-	padding-block: 2rem;
-	padding-inline: 2.75rem;
 	box-shadow: var(--bint-shadow);
 	border-top: 4px solid var(--bint-primary);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
